@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "hero-quest"
+version = "0.1.0"
+description = ""
+authors = ["Jordan Cottle <jordancottle622@gmail.com>"]
+
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/Jordan-Cottle/HeroQuest"
+repository = "https://github.com/Jordan-Cottle/HeroQuest"
+include = ["LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+py-events = "^0.1.2"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.9.6"
+black = "^21.7b0"
+pytest = "^6.2.4"
+mypy = "^0.910"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = [
+    "--cov",
+    "-vv",
+    "--stepwise",
+]
+log_cli = true
+log_cli_level = "DEBUG"
+testpaths = [
+    "tests",
+]
+
+[tool.pylint.messages_control]
+disable = """
+logging-fstring-interpolation,
+"""

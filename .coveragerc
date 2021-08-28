@@ -1,0 +1,15 @@
+[run]
+source = hero_quest, tests
+
+[report]
+
+fail_under = 100
+
+include = hero_quest/*
+
+show_missing = true
+
+sort = -miss
+
+exclude_lines =
+    if __name__ == .__main__.
