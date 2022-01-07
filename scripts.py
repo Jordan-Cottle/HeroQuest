@@ -17,7 +17,7 @@ assert (
 ), "You really should be using a virtual environment"
 
 
-def _run(command, quiet=False):
+def _run(command: str, quiet: bool = False) -> str:
 
     if not quiet:
         print(command)
@@ -76,7 +76,7 @@ def test(options: Iterable[str] = ()) -> None:
     _run(f"pytest {' '.join(options)}")
 
 
-def get_git_tag():
+def get_git_tag() -> str:
     """Get the git tag for this commit.
 
     It's a bit of a mess with all of the possible different ways actions can check out the project.
