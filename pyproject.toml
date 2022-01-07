@@ -42,3 +42,17 @@ testpaths = [
 disable = """
 logging-fstring-interpolation,
 """
+
+[tool.mypy]
+warn_return_any = true
+disallow_untyped_defs = true
+pretty = true
+error_summary = true
+
+[[tool.mypy.overrides]]
+module = "py_events"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
