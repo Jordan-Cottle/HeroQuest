@@ -50,7 +50,7 @@ pretty = true
 error_summary = true
 
 [[tool.mypy.overrides]]
-module = "py_events"
+module = "py_events.*"
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
